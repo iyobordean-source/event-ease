@@ -1,214 +1,235 @@
 /* EventEase Full Landing Page Styles */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-body{
-    padding: 0;
+/* RESET */
+* {
     margin: 0;
-    background-color: orangered;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-header .logo p{
-    font-family: 'Poppins', sans-serif;
-    position: relative;
-    left: 60px;
-    top: 10px;
-    font-size: 34px;
-    font-weight: 600;
+body {
+    background:orangered;
+    color: #222;
+    overflow-x: hidden;
 }
 
-header .welcome p{
-    font-family: 'Poppins', sans-serif;
-    position: relative;
-    top: 57px;
-    left: 25px;
-    font-family: Poppins;
-    font-weight: 700;
-    font-style: Bold;
-    font-size: 64px;
+/* ================= HEADER ================= */
+header {
+    width: 100%;
+    padding: 40px 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
 
-header .welcome img{
-    padding: 0%;
-    margin: 0%;
-    position: relative;
-    bottom: 780px;
-    left: 495px;
-    width: 980px;
+/* Logo */
+.logo p {
+    font-size: 32px;
+    font-weight: bold;
 }
 
-section .offer{
-    position: relative;
-    bottom: 900px;
-    left: 25px;
+/* Welcome Section */
+.welcome {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.users{
-    max-width: fit-content ;
-    background: transparent;
-    border: 2px lightgrey solid;
-    border-radius: 30px;
-    padding: 10px;
-    position: relative;
-    bottom: 1200px;
-    left: 1145px;
+.welcome p {
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 1.2;
 }
 
-.users p{
-    font-family: 'Poppins', sans-serif;
-    font-size: 20px;
-    position: relative;
-    left: 1rem;
+.welcome img {
+    width: 240px;
+    height: auto;
+}
+
+/* Users */
+.users {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.users p {
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .users img {
-    width: 42px;
-    height: 42px;
-    border-radius: 60px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
 }
 
-.material-symbols-outlined {
-    font-size: 60px;
-    color: orangered;
-}    
+/* ================= FEATURES ================= */
+.ee-features {
+    padding: 70px 10%;
+    text-align: center;
+}
 
-.ee-features h2{
-    position: relative;
-    bottom: 800px;
-    left: 25px;
-    font-family: Poppins;
-    font-weight: 700;
-    font-style: Bold;
-    font-size: 38px;
+.ee-features h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
 }
 
 .ee-features-grid {
-    position: relative;
-    bottom: 700px;
-    right: 190px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
 }
 
 .ee-feature-card {
-    background: #fff;
-    padding: 48px;
-    border-radius: 18px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
-    width: 300px;
-    transition: .3s;
-    font-family: poppins, sans-serif;
-    font-size: large;
-    font-weight: 600;
+    padding: 25px;
+    border-radius: 15px;
+    background: #f5f5f5;
+    text-align: center;
 }
 
-.ee-feature-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 15px 14px 40px grey;
+.ee-feature-card span {
+    font-size: 40px;
 }
 
-.ee-download{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    left: 69px;
+.ee-feature-card h3 {
+    font-size: 22px;
+    margin: 12px 0;
 }
 
-.ee-download h2{
-    position: relative;
-    bottom: 600px;
-    font-size: 42px;
-    font-style: bold;
-    font-weight: 600;
+/* ================= TEAM SECTION ================= */
+#team {
+    padding: 70px 10%;
+    text-align: center;
 }
 
-.ee-store-img{
-     width: 176px;
-     position: relative;
-     bottom: 600px;
+#team h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
 }
 
-/*------------------ MOBILE RESPONSIVENESS ------------------*/
-/*------------------ MOBILE RESPONSIVENESS ------------------*/
-@media (max-width: 768px) {
-    header .logo p {
-        left: 20px;
-        top: 5px;
-        font-size: 28px;
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.team-member {
+    background: #f5f5f5;
+    padding: 25px;
+    border-radius: 15px;
+}
+
+.team-member img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
+
+.team-member h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+/* ================= TESTIMONIALS ================= */
+.testimonials {
+    padding: 70px 10%;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.testimonial-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.testimonial-card {
+    background: #f5f5f5;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: left;
+}
+
+.testimonial-text {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+/* ================= DOWNLOAD ================= */
+.ee-download {
+    padding: 70px 10%;
+    text-align: center;
+}
+
+.ee-download h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.ee-download-buttons img {
+    width: 170px;
+}
+
+/* ========================================================= */
+/* ================= MOBILE RESPONSIVENESS ================= */
+/* ========================================================= */
+
+@media (max-width: 900px) {
+
+    /* Welcome */
+    .welcome {
+        flex-direction: column;
+        text-align: center;
     }
 
-    header .welcome p {
-        font-size: 36px;
-        top: 30px;
-        left: 15px;
+    .welcome img {
+        width: 200px;
+        margin-top: 20px;
     }
 
-    /* Move the welcome image below the text */
-    header .welcome img {
-        position: static; /* remove previous absolute positioning */
-        width: 90%;
-        margin: 20px auto 0 auto; /* center the image below text */
-        display: block;
-        bottom: auto;
-        left: auto;
+    /* Features */
+    .ee-features-grid {
+        grid-template-columns: 1fr;
     }
 
-    section .offer {
-        left: 10px;
-        bottom: auto;
+    /* Team */
+    .team-grid {
+        grid-template-columns: 1fr 1fr;
     }
 
-    /* Move .users box below the welcome image */
-    .users {
-        position: static; /* remove previous absolute positioning */
-        max-width: 90%;
-        margin: 20px auto 0 auto; /* center horizontally */
-        bottom: auto;
-        left: auto;
+    /* Testimonials */
+    .testimonial-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+
+    /* Team */
+    .team-grid {
+        grid-template-columns: 1fr;
     }
 
-    .users p {
-        font-size: 16px;
-        left: 0;
+    /* Logo */
+    .logo p {
+        font-size: 26px;
+    }
+
+    .welcome p {
+        font-size: 30px;
     }
 
     .users img {
-        width: 36px;
-        height: 36px;
+        width: 40px;
+        height: 40px;
     }
 
-    .material-symbols-outlined {
-        font-size: 48px;
-    }
-
-    .ee-features h2 {
-        font-size: 28px;
-        bottom: auto;
-        left: 15px;
-    }
-
-    .ee-features-grid {
-        flex-direction: column;
-        bottom: auto;
-        right: 0;
-        gap: 15px;
-    }
-
-    .ee-feature-card {
-        width: 90%;
-        padding: 32px;
-        font-size: medium;
-    }
-
-    .ee-download h2 {
-        font-size: 28px;
-        bottom: auto;
-    }
-
-    .ee-store-img {
-        width: 140px;
-        bottom: auto;
+    .ee-download-buttons img {
+        width: 150px;
     }
 }
